@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --toastify-color-dark: #1a1e25;
+  --toastify-color-success: #16a34a;
+  --toastify-color-error: #dc2626;
+  --toastify-color-warning: #d97706;
+  --toastify-color-info: #7c3aed;
+}
+
+html {
+  @apply bg-dark-400 text-white;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-dark-400 text-white min-h-screen;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold leading-tight;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl;
+}
+
+h3 {
+  @apply text-xl md:text-2xl;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+.card {
+  @apply bg-dark-200 rounded-xl p-6 shadow-soft border border-dark-100;
+}
+
+.input {
+  @apply bg-dark-300 border border-dark-100 rounded-lg px-4 py-2.5 text-white w-full focus:outline-none focus:ring-2 focus:ring-primary-500 transition duration-200;
+}
+
+.btn {
+  @apply flex items-center justify-center px-6 py-2.5 rounded-lg font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white;
+}
+
+.btn-secondary {
+  @apply bg-secondary-600 hover:bg-secondary-700 text-white;
+}
+
+.btn-accent {
+  @apply bg-accent-500 hover:bg-accent-600 text-white;
+}
+
+.btn-outline {
+  @apply border border-dark-100 hover:bg-dark-300 text-white;
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+.mapboxgl-canvas {
+  @apply rounded-lg;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-300;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-800;
+}
+
+/* Auth form animations */
+.auth-form-appear {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.auth-form-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Table styles */
+.table-container {
+  @apply overflow-x-auto rounded-lg border border-dark-100;
+}
+
+.table {
+  @apply min-w-full divide-y divide-dark-100;
+}
+
+.table th {
+  @apply px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-400 bg-dark-300;
+}
+
+.table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm;
+}
+
+.table tbody tr {
+  @apply bg-dark-200 border-b border-dark-100;
+}
+
+.table tbody tr:hover {
+  @apply bg-dark-300;
+}
+
+/* Card hover effect */
+.hover-card {
+  @apply transition-all duration-300 hover:shadow-hard hover:-translate-y-1;
+}
+
+/* Pagination */
+.pagination {
+  @apply flex space-x-1 mt-4 justify-center;
+}
+
+.pagination-item {
+  @apply px-3 py-1 rounded-md bg-dark-300 hover:bg-dark-100 transition-colors;
+}
+
+.pagination-item.active {
+  @apply bg-primary-600 text-white;
+}
+
+/* Map controls */
+.map-control {
+  @apply absolute z-10 bg-dark-200 p-2 rounded-lg shadow-soft;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply animate-spin h-5 w-5 text-white;
+}
+
+/* Avatar */
+.avatar {
+  @apply rounded-full object-cover;
+}
+
+/* Badge */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+  @apply bg-success-100 text-success-800;
+}
+
+.badge-warning {
+  @apply bg-warning-100 text-warning-800;
+}
+
+.badge-danger {
+  @apply bg-danger-100 text-danger-800;
+}
+
+.badge-info {
+  @apply bg-primary-100 text-primary-800;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply h-2 rounded-full bg-dark-100 overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full rounded-full bg-primary-500;
+}
+
+/* Toast notifications */
+.Toastify__toast {
+  @apply rounded-xl !important;
+}
